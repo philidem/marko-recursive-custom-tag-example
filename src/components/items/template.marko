@@ -1,0 +1,15 @@
+div class="items" w-bind
+
+    div class="items-header"
+        - ITEMS (Count: ${data.items ? data.items.length : 0})
+        a href="#" w-onClick="handleClickAddItem" - Add Item
+
+    <!-- Loop through the children items (if any) -->
+    ul class="items-children" if(notEmpty(data.items))
+        for(item in data.items)
+            <!--
+            We use a custom tag to actually render the item because
+            it is a separate component with its own index.js, style.less,
+            and template.marko.
+            -->
+            demo-item(item) w-id="item[]"

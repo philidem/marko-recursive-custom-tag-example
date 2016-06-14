@@ -1,0 +1,8 @@
+{
+    "tags-dir": [
+        {
+            "path": "./components",
+            "prefix": "demo-"
+        }
+    ]
+}
